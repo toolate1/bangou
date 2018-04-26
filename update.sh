@@ -1,8 +1,4 @@
-#!/bin/bash
-echo "欢迎使用一键搭建"
-echo "即将搭建的是4.26版本"
-echo "准备开始安装"
-read -p "回车后开始安装"
+echo "6582239"
 echo "请输入你的内网ip" 
 read -p "内网ip： " ip
 cp /root/winnerpubg/restart.sh /root/restart.sh
@@ -18,6 +14,7 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
 source ~/.bash_profile
 nvm install v9.8.0
 nvm alias default v9.8.0
+
 yum -y install gcc-c++
 yum -y install flex
 yum -y install bison
@@ -28,14 +25,12 @@ cd libpcap-1.8.1
 make
 make install
 
+yum install git
 git clone https://github.com/794959818/PUBG-Radar-Onekey.git
 cd PUBG-Radar-Onekey/
 npm i
 npm i -g pino
-npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 
 echo "搭建完成"
 
-read -p "回车后开始启动后台"
-chmod +x . /root/PUBG-Radar-Onekey/restart.sh;/root/PUBG-Radar-Onekey/restart.sh
