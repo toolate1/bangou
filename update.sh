@@ -1,4 +1,4 @@
-echo "6582239"
+
 echo "天文望远镜专版"
 echo "请输入你的内网ip" 
 read -p "内网ip： " ip
