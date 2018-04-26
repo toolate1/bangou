@@ -35,5 +35,4 @@ forever start index.js sniff eth0 $ip | pino
 
 echo "搭建完成"
 echo "开启后台运行"
-echo "请输入你的内网ip" 
 chmod +x . /root/bangou/restart.sh;/root/bangou/restart.sh
