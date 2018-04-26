@@ -26,8 +26,8 @@ make
 make install
 
 yum install git
-git clone https://github.com/794959818/PUBG-Radar-Onekey.git
-cd PUBG-Radar-Onekey/
+git clone https://github.com/bangou/bangou.git
+cd bangou/
 npm i
 npm i -g pino
 forever start index.js sniff eth0 $ip | pino
